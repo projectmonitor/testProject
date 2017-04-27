@@ -21,6 +21,5 @@ if [ $found_finishes_tag -eq 0 ]
 then
   grab_story_id
   update_tracker_story
-  export STORY_ID=$STORY_ID
 fi
 
