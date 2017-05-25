@@ -15,6 +15,11 @@ if [[ "$ShaToBuild" == "0" ]] ; then
   exit 1
 fi
 
+if [[ "$STORY_ID" == "0" ]] ; then
+  echo "Please set STORY_ID, we had: $STORY_ID"
+  exit 1
+fi
+
 ShaToBuild=$(git rev-parse $ShaToBuild)
 echo "Building SHA $ShaToBuild"
 
