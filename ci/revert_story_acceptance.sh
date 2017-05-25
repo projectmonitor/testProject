@@ -22,7 +22,7 @@ git checkout $ShaToBuild
 
 mvn clean package -DskipTests
 
-./ci/add_story_to_manifest.sh manifest-acceptance.yml ${ShaRebased} ${STORY_ID}
+./ci/add_story_to_manifest.sh manifest-acceptance.yml ${ShaToBuild} ${STORY_ID}
 
 cf login -a api.run.pivotal.io -u ${CF_USER} -p ${CF_PASSWORD} -s $CF_SPACE -o $CF_ORG
 cf push -f manifest.yml -t 180
